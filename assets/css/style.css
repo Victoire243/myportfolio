@@ -271,7 +271,11 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
 /*.single-about-txt*/
 
 /*.single-about-img */
-.single-about-img{position: relative;box-shadow: 0 5px 20px rgba(14,25,80,.30); border-radius: 50%;}
+.single-about-img{
+    position: relative;
+    box-shadow: 0 5px 20px rgba(14,25,80,.30); 
+    border-radius: 50%;
+}
 .single-about-img:before {
     border-radius: 50%;
     position:  absolute;
@@ -284,8 +288,8 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
 }
 .single-about-img img {
     border-radius: 50%;
-    max-width: 500px;
-    height: 468px;
+    max-width: 100%;
+    height: auto;
 }
 .about-list-icon{
     display: flex;
