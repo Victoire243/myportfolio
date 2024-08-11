@@ -124,4 +124,23 @@ $(document).ready(function(){
         });
 
 });	
+
+
+// 6. Mail service
+
+document.getElementById('sendButton').addEventListener('click', function(event) {
+	event.preventDefault();
 	
+	var name = document.getElementById('name').value; // Get the value of the 'name' input field
+	var email = document.getElementById('email').value; // Get the value of the 'email' input field
+	var subject = document.getElementById('subject').value; // Get the value of the 'subject' input field
+	var message = document.getElementById('comment').value; // Get the value of the 'comment' input field
+
+	if (email == '' || subject == '' || message == '' || name == '') {
+		alert('Veuillez remplir tous les champs'); // Display an alert if any of the fields are empty
+	} else {
+		var mailtoLink = 'mailto:yumakitenge243@gmail.com' + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message + '\n\nFrom: ' + email + '\n\n\n' + name);
+
+		window.location.href = mailtoLink; // Open the default email client with the pre-filled email fields
+	}
+});
