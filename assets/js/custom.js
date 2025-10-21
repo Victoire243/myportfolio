@@ -126,21 +126,61 @@ $(document).ready(function(){
 });	
 
 
-// 6. Mail service
+// 6. Mail service with enhanced validation
 
 document.getElementById('sendButton').addEventListener('click', function(event) {
 	event.preventDefault();
 	
-	var name = document.getElementById('name').value; // Get the value of the 'name' input field
-	var email = document.getElementById('email').value; // Get the value of the 'email' input field
-	var subject = document.getElementById('subject').value; // Get the value of the 'subject' input field
-	var message = document.getElementById('comment').value; // Get the value of the 'comment' input field
+	var name = document.getElementById('name').value.trim();
+	var email = document.getElementById('email').value.trim();
+	var subject = document.getElementById('subject').value.trim();
+	var message = document.getElementById('comment').value.trim();
 
-	if (email == '' || subject == '' || message == '' || name == '') {
-		alert('Veuillez remplir tous les champs'); // Display an alert if any of the fields are empty
-	} else {
-		var mailtoLink = 'mailto:yumakitenge243@gmail.com' + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message + '\n\nFrom: ' + email + '\n\n\n' + name);
+	// Email validation regex
+	var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-		window.location.href = mailtoLink; // Open the default email client with the pre-filled email fields
+	if (name === '') {
+		alert('Veuillez entrer votre nom');
+		document.getElementById('name').focus();
+		return;
 	}
+
+	if (email === '') {
+		alert('Veuillez entrer votre email');
+		document.getElementById('email').focus();
+		return;
+	}
+
+	if (!emailRegex.test(email)) {
+		alert('Veuillez entrer une adresse email valide');
+		document.getElementById('email').focus();
+		return;
+	}
+
+	if (subject === '') {
+		alert("Veuillez entrer l'objet du message");
+		document.getElementById('subject').focus();
+		return;
+	}
+
+	if (message === '') {
+		alert('Veuillez entrer votre message');
+		document.getElementById('comment').focus();
+		return;
+	}
+
+	// Create mailto link with improved formatting
+	var mailtoLink = 'mailto:info@victoirekitenge.tech' + 
+		'?subject=' + encodeURIComponent(subject) + 
+		'&body=' + encodeURIComponent(
+			'Message de: ' + name + '\n' +
+			'Email: ' + email + '\n' +
+			'------------------\n\n' +
+			message
+		);
+
+	window.location.href = mailtoLink;
+	
+	// Show success message
+	alert('Merci pour votre message! Votre client email va s\'ouvrir.');
 });

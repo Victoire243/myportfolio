@@ -1,0 +1,335 @@
+/* Modern Portfolio Enhancements */
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Enhanced Navigation */
+.navbar-brand {
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+    color: #00d9ff !important;
+}
+
+.navbar-nav > li > a {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar-nav > li > a:hover {
+    color: #00d9ff !important;
+}
+
+.navbar-nav > li > a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #00d9ff;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar-nav > li > a:hover::after {
+    width: 80%;
+}
+
+/* Enhanced Welcome Section */
+.welcome-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(255, 0, 217, 0.1) 100%);
+    z-index: 1;
+}
+
+.header-text {
+    position: relative;
+    z-index: 2;
+}
+
+.header-text h1 {
+    animation: fadeInUp 1s ease-out;
+}
+
+.header-text p {
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.header-text a {
+    animation: fadeInUp 1.4s ease-out;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 217, 255, 0.3);
+}
+
+.header-text a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 217, 255, 0.5);
+}
+
+/* Enhanced About Section */
+.single-about-img img {
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.single-about-img:hover img {
+    transform: scale(1.05);
+}
+
+.about-list-icon ul li a {
+    transition: all 0.3s ease;
+}
+
+.about-list-icon ul li a:hover {
+    transform: translateY(-5px) scale(1.1);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Enhanced Education Section */
+.single-horizontal-timeline {
+    transition: all 0.3s ease;
+}
+
+.single-horizontal-timeline:hover {
+    transform: translateY(-10px);
+}
+
+.single-horizontal-timeline:hover .timeline-content {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced Skills Section */
+.progress-bar {
+    transition: width 1.5s ease-in-out;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+}
+
+.barWrapper {
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.barWrapper:hover {
+    transform: translateX(10px);
+}
+
+.barWrapper:hover .progressText {
+    color: #667eea;
+    font-weight: 600;
+}
+
+/* Enhanced Experience Section */
+.experience {
+    background: #f9f9f9;
+}
+
+.single-timeline-box {
+    transition: all 0.3s ease;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.single-timeline-box:hover {
+    background: rgba(102, 126, 234, 0.05);
+    transform: translateX(10px);
+}
+
+.timeline-content {
+    transition: all 0.3s ease;
+}
+
+.single-timeline-box:hover .timeline-content {
+    transform: scale(1.02);
+}
+
+/* Enhanced Portfolio Section */
+.item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.item img {
+    transition: all 0.5s ease;
+}
+
+.item:hover img {
+    transform: scale(1.1);
+}
+
+.isotope-overlay {
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%);
+}
+
+.isotope-overlay a {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced Contact Section */
+.form-control {
+    transition: all 0.3s ease;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+.form-control:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 15px rgba(102, 126, 234, 0.3);
+    transform: translateY(-2px);
+}
+
+.contact-btn {
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.contact-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.hm-foot-icon ul li a {
+    transition: all 0.3s ease;
+}
+
+.hm-foot-icon ul li a:hover {
+    transform: translateY(-5px) rotate(360deg);
+}
+
+/* Section Headings Enhancement */
+.section-heading h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.section-heading h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading Animation for Progress Bars */
+@keyframes progressAnimation {
+    from {
+        width: 0;
+    }
+}
+
+/* Responsive Enhancements */
+@media only screen and (max-width: 768px) {
+    .navbar-nav > li > a::after {
+        display: none;
+    }
+    
+    .barWrapper:hover {
+        transform: none;
+    }
+    
+    .single-timeline-box:hover {
+        transform: none;
+    }
+}
+
+/* Additional Modern Touch - Card Effects */
+.single-about-txt,
+.timeline-content,
+.single-contact-box {
+    transition: all 0.3s ease;
+}
+
+/* Gradient Text Effect for Headers */
+.header-text h1 span {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Modern Button Styles */
+button, .btn, a[role="button"] {
+    position: relative;
+    overflow: hidden;
+}
+
+button::before, .btn::before, a[role="button"]::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+button:hover::before, .btn:hover::before, a[role="button"]:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Enhanced Footer */
+.footer-copyright {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+}
+
+/* Smooth Appearance for Sections */
+.about, .education, .skills, .experience, .portfolio, .contact {
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
